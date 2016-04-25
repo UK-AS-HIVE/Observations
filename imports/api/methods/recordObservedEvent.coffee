@@ -1,3 +1,4 @@
+{ Actions } = require '/imports/api/collections/actions.coffee'
 { Events } = require '/imports/api/collections/events.coffee'
 
 Meteor.methods
