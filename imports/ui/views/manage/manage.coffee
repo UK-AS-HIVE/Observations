@@ -1,6 +1,9 @@
 require './manage.html'
 { Actions } = require '/imports/api/collections/actions.coffee'
 
+Template.manage.onCreated ->
+  @subscribe 'actions'
+
 Template.manage.helpers
   actions: ->
     Actions.find()

@@ -18,7 +18,6 @@ standard-minifier-js    # JS minifier run for production mode
 coffeescript
 modules
 
-autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 aldeed:simple-schema
 aldeed:collection2
