@@ -22,3 +22,6 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 aldeed:simple-schema
 aldeed:collection2
+hive:accounts-ldap
+twbs:bootstrap
+less

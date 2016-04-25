@@ -1,4 +1,8 @@
 <body>
-  {{> observations}}
+  {{#if currentUser}}
+    {{> observations}}
+  {{else}}
+    {{> login}}
+  {{/if}}
 </body>
 
