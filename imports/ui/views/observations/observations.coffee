@@ -1,5 +1,5 @@
 require './observations.html'
-require '/imports/api/collections/actions.coffee'
+{Actions} = require '/imports/api/collections/actions.coffee'
 require '/imports/api/methods/recordObservedEvent.coffee'
 
 Template.observations.helpers
