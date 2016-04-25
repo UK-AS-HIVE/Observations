@@ -1,6 +1,9 @@
+{ Events } = require '/imports/api/collections/events.coffee'
+
 Meteor.methods
   'recordObservedEvent': (actionId) ->
-    Events.insert
-      actionId: actionId
-      userId: @userId
-      timestamp: new Date()
+    if Actions.findOne(actionId) and @userId
+      Events.insert
+        actionId: actionId
+        userId: @userId
+        timestamp: new Date()
