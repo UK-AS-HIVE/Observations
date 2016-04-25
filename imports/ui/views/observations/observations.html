@@ -1,6 +1,6 @@
 <template name="observations">
   <h4 class="text-center">Observations</h4>
-
+  <h5 class="text-success text-center">{{#if recorded}}Action recorded.{{/if}}&nbsp;</h5>
   {{#each actions}}
     <button type="button" class="col-xs-12 btn btn-primary action-button">
       {{name}}
