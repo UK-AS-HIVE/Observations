@@ -12,3 +12,5 @@ Events.attachSchema new SimpleSchema
   attachments:
     # Array of FileRegistry _id's
     type: [ String ]
+
+exports.Events = Events

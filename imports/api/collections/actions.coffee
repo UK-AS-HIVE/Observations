@@ -6,3 +6,5 @@ Actions.attachSchema new SimpleSchema
   name:
     type: String
     label: "Action Name"
+
+exports.Actions = Actions
