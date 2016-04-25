@@ -1,4 +1,10 @@
 <template name="observations">
   Observations
+
+  {{#each action in actions}}
+    <div class="action-button">
+      {{name}}
+    </div>
+  {{/each}}
 </template>
 
