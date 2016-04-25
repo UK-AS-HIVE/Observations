@@ -1,0 +1,14 @@
+{ SimpleSchema } = require 'meteor/aldeed:simple-schema'
+{ Mongo } = require 'meteor/mongo'
+
+Events = new Mongo.Collection 'events'
+Events.attachSchema new SimpleSchema
+  actionId:
+    type: String
+  userId:
+    type: String
+  timestamp:
+    type: new Date()
+  attachments:
+    # Array of FileRegistry _id's
+    type: [ String ]
