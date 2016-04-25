@@ -4,5 +4,5 @@
 
 exports.Permissions =
   userIsAdmin: (userId) ->
-    _.contains Meteor.settings?.admins, Meteor.users.findOne(userId)?.name
+    _.contains Meteor.settings?.admins, Meteor.users.findOne(userId)?.username
 
