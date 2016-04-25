@@ -1,3 +1,18 @@
 <template name="manage">
-  Manage
+  <div>
+    Manage
+    {{#each actions}}
+      <div class="row">
+        <div class="col-xs-6">
+          {{name}} <button type="button" class="remove-action"><span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+      </div>
+    {{/each}}
+    <div class="input-group col-xs-3">
+      <input type="text" name="name" class="form-control" placeholder="Add a new action...">  
+      <span class="input-group-btn">
+        <button type="button" class="btn add-action">Add</button>
+      </span>
+    </div>
+  </div>
 </template>
