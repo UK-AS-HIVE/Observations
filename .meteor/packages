@@ -25,3 +25,4 @@ aldeed:collection2
 hive:accounts-ldap
 twbs:bootstrap
 less
+practicalmeteor:mocha
