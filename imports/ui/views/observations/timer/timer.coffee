@@ -28,6 +28,12 @@ Template.timer.helpers
     else
       "Start"
 
+  buttonClass: ->
+    if Template.instance().running.get()
+      "btn-danger"
+    else
+      "btn-success"
+
 Template.timer.events
   'click button': (e, tpl) ->
     tpl.start = Date.now()

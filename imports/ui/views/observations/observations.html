@@ -1,11 +1,13 @@
 <template name="observations">
-  <h4 class="text-center">Observations</h4>
+  <h2 class="text-center">Observations</h2>
   {{> timer}}
-  <h5 class="text-success text-center">{{#if recorded}}Action recorded.{{/if}}&nbsp;</h5>
-  {{#each actions}}
-    <button type="button" class="col-xs-12 btn btn-primary action-button">
-      {{name}}
-    </button>
-  {{/each}}
+  <h3 class="text-success text-center">{{#if recorded}}Action recorded.{{/if}}&nbsp;</h3>
+  <div class="action-container">
+    {{#each actions}}
+      <button type="button" class="btn btn-primary action-button" style="height: {{buttonHeight}}">
+        {{name}}
+      </button>
+    {{/each}}
+  </div>
 </template>
 

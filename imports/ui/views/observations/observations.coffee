@@ -9,6 +9,8 @@ Template.observations.onCreated ->
   @recorded = new ReactiveVar false
 
 Template.observations.helpers
+  buttonHeight: ->
+    Math.min(( $(window).height() - 200 ) / Actions.find().count(), 100) + 'px'
   actions: ->
     Actions.find()
   recorded: ->
