@@ -1,7 +1,9 @@
 <body>
   {{#if currentUser}}
     {{> observations}}
-    {{> manage}}
+    {{#if isAdmin}}
+      {{> manage}}
+    {{/if}}
   {{else}}
     {{> login}}
   {{/if}}
