@@ -1,3 +1,4 @@
+require './timer/timer.coffee'
 require './observations.html'
 {Actions} = require '/imports/api/collections/actions.coffee'
 require '/imports/api/methods/recordObservedEvent.coffee'
