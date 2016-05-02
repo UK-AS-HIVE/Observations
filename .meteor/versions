@@ -33,6 +33,7 @@ ejson@1.0.10
 fastclick@1.0.10
 geojson-utils@1.0.7
 hive:accounts-ldap@0.4.1
+hive:export-csv@1.0.2
 hot-code-push@1.0.3
 html-tools@1.0.8
 htmljs@1.0.8

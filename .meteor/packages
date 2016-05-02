@@ -26,3 +26,4 @@ twbs:bootstrap
 less
 practicalmeteor:mocha
 alanning:roles
+hive:export-csv
