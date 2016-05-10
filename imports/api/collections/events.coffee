@@ -5,7 +5,11 @@ Events = new Mongo.Collection 'events'
 Events.attachSchema new SimpleSchema
   actionId:
     type: String
+  action:
+    type: String
   userId:
+    type: String
+  username:
     type: String
   timestamp:
     type: new Date()

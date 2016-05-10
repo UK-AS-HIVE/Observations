@@ -3,8 +3,10 @@
 
 Meteor.methods
   'recordObservedEvent': (actionId) ->
-    if Actions.findOne(actionId) and @userId
+    if @userId and a = Actions.findOne(actionId)
       Events.insert
         actionId: actionId
+        action: a.name
         userId: @userId
+        username: Meteor.users.findOne(@userId).username
         timestamp: new Date()

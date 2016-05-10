@@ -10,4 +10,4 @@ require '/imports/api/methods/removeAction.coffee'
 Meteor.startup ->
   WebApp.connectHandlers.use '/export', Meteor.bindEnvironment (req, res, next) ->
     #{writeCSV} = require 'meteor/hive:export-csv'
-    writeCSV Events, {}, ['actionId', 'userId', 'timestamp'], 'observations', res
+    writeCSV Events, {}, ['action', 'username', 'timestamp'], 'observations', res
