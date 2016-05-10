@@ -16,7 +16,9 @@ Template.timer.onCreated ->
       t = (Date.now() - self.start) / 1000
       s = Math.floor(t % 60)
       m = Math.floor(t/60)
-      self.time.set (zeroPad(m) + ':' + zeroPad(s))
+      time = zeroPad(m) + ':' + zeroPad(s)
+      self.time.set time
+      Session.set 'time', time
   , 1000
 
 Template.timer.helpers
