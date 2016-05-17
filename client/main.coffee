@@ -7,6 +7,10 @@ Template.body.helpers
   isAdmin: ->
     Permissions.userIsAdmin Meteor.user()?._id
 
+Template.body.events
+  'click .logout-button': ->
+    Meteor.logout()
+
 Tracker.autorun ->
   if Meteor.userId()
     Cookie.set 'meteor_login_token', localStorage['Meteor.loginToken']

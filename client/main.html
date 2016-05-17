@@ -1,9 +1,12 @@
 <body>
   {{#if currentUser}}
-    {{> observations}}
-    {{#if isAdmin}}
-      {{> manage}}
-    {{/if}}
+    <div class="container">
+      <button type="button" class="pull-right btn btn-small logout-button">Logout</button>
+      {{> observations}}
+      {{#if isAdmin}}
+        {{> manage}}
+      {{/if}}
+    </div>
   {{else}}
     {{> login}}
   {{/if}}
