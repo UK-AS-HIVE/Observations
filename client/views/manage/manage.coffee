@@ -50,4 +50,4 @@ Template.manage.events
             tpl.confirming.set false
             tpl.message.set 'Results reset.'
       else
-      tpl.message.set "Please type 'Yes' to confirm."
+        tpl.message.set "Please type 'Yes' to confirm."
