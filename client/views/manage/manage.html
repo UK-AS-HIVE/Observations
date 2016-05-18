@@ -1,23 +1,55 @@
 <template name="manage">
   <div class="manage">
-    <h4>Manage Actions</h4>
-    {{#each actions}}
-      <div class="row">
-        <div class="col-xs-12">
-          <button type="button" class="btn btn-xs btn-link remove-action"><span class="glyphicon glyphicon-remove"></span></button><strong>{{name}}</strong> 
+    <div class="panel panel-default action-panel">
+      <div class="panel-heading">Manage Actions</div>
+      <div class="panel-body">
+        {{#each actions}}
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="button" class="btn btn-md btn-link remove-action"><span class="glyphicon glyphicon-remove"></span></button><strong>{{name}}</strong> 
+            </div>
+          </div>
+        {{/each}}
+        <div class="row">
+          <div class="input-group col-xs-4 col-xs-offset-4">
+            <input type="text" name="name" class="form-control" placeholder="Add a new action...">  
+            <span class="input-group-btn">
+              <button type="button" class="btn add-action">Add</button>
+            </span>
+          </div>
         </div>
-      </div>
-    {{/each}}
-    <div class="row">
-      <div class="input-group col-xs-4 col-xs-offset-4">
-        <input type="text" name="name" class="form-control" placeholder="Add a new action...">  
-        <span class="input-group-btn">
-          <button type="button" class="btn add-action">Add</button>
-        </span>
       </div>
     </div>
     <div class="row">
-      <a href="/export">Export results as CSV...</a>
+      <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Export</div>
+          <div class="panel-body">
+            <a href="/export"><button class="btn btn-lg btn-primary">Export results as CSV...</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-danger">
+          <div class="panel-heading">Danger Zone</div>
+          <div class="panel-body">
+            <button class="btn btn-lg btn-danger" data-action="reset">Reset Results</button>
+            {{#if message}}
+              <div class="message">
+                {{message}}
+              </div>
+            {{/if}}
+            {{#if confirming}}
+              <div>
+              Are you sure? Please type "Yes" to delete all recorded results.
+              <input type="text" name="confirmReset" class="form-control">
+              <button class="btn btn-sm btn-default pull-left" data-action="cancel">Cancel</button>
+              <button class="btn btn-sm btn-danger pull-right" data-action="confirm">Confirm</button>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

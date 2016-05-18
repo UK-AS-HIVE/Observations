@@ -6,6 +6,7 @@ require '/imports/api/publications.coffee'
 require '/imports/api/methods/recordObservedEvent.coffee'
 require '/imports/api/methods/addAction.coffee'
 require '/imports/api/methods/removeAction.coffee'
+require '/imports/api/methods/resetResults.coffee'
 
 Meteor.startup ->
   WebApp.connectHandlers.use '/export', Meteor.bindEnvironment (req, res, next) ->
