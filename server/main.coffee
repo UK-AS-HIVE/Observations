@@ -16,7 +16,7 @@ Meteor.startup ->
     token = cookies['meteor_login_token']
     unless token? and Permissions.userIsAdmin Meteor.users.findOne(
         "services.resume.loginTokens.hashedToken": Accounts._hashLoginToken(token)
-      )._id
+      )?._id
       res.statusCode = 403
       res.end 'Access denied.'
       return
