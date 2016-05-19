@@ -5,6 +5,7 @@ Meteor.methods
   'recordObservedEvent': (actionId) ->
     if @userId and a = Actions.findOne(actionId)
       Events.insert
+        type: 'action'
         actionId: actionId
         action: a.name
         userId: @userId

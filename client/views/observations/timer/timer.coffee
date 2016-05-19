@@ -18,7 +18,6 @@ Template.timer.onCreated ->
       m = Math.floor(t/60)
       time = zeroPad(m) + ':' + zeroPad(s)
       self.time.set time
-      Session.set 'time', time
   , 1000
 
 Template.timer.helpers
@@ -40,4 +39,5 @@ Template.timer.events
   'click button': (e, tpl) ->
     tpl.start = Date.now()
     tpl.running.set !tpl.running.get()
+    Meteor.call 'recordTimerEvent', tpl.running.get()
 

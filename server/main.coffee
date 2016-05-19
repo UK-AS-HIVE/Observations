@@ -7,6 +7,7 @@ require '/imports/api/methods/recordObservedEvent.coffee'
 require '/imports/api/methods/addAction.coffee'
 require '/imports/api/methods/removeAction.coffee'
 require '/imports/api/methods/resetResults.coffee'
+require '/imports/api/methods/recordTimerEvent.coffee'
 
 Meteor.startup ->
   WebApp.connectHandlers.use '/export', Meteor.bindEnvironment (req, res, next) ->
@@ -23,4 +24,4 @@ Meteor.startup ->
       return
 
     #{writeCSV} = require 'meteor/hive:export-csv'
-    writeCSV Events, {}, ['action', 'username', 'timestamp'], 'observations', res
+    writeCSV Events, {}, ['type', 'action', 'username', 'timestamp'], 'observations', res

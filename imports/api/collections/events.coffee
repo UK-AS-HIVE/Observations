@@ -3,10 +3,15 @@
 
 Events = new Mongo.Collection 'events'
 Events.attachSchema new SimpleSchema
+  type:
+    type: String
+    allowedValues: [ 'action', 'timerStart', 'timerStop' ]
   actionId:
     type: String
+    optional: true
   action:
     type: String
+    optional: true
   userId:
     type: String
   username:
